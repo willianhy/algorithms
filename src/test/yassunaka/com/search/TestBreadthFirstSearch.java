@@ -4,10 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import yassunaka.com.search.BreadthFirstSearch;
 import yassunaka.com.search.DepthFirstSearch;
 import yassunaka.com.search.Node;
 
-public class TestDepthFirstSearch {
+public class TestBreadthFirstSearch {
 
 	@Test
 	public void happyDay() {
@@ -16,10 +17,10 @@ public class TestDepthFirstSearch {
 		Node rightNode = new Node(5);
 		Node root = new Node(1, leftNode, rightNode);
 		
-		DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
-		depthFirstSearch.execute(root);
+		BreadthFirstSearch breadthFirstSearch = new BreadthFirstSearch();
+		breadthFirstSearch.execute(root);
 		
-		assertEquals("should be", "1465", depthFirstSearch.getResult());
+		assertEquals("should be", "1456", breadthFirstSearch.getResult());
 	}
 
 }

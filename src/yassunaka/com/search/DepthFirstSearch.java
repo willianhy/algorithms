@@ -6,18 +6,18 @@ public class DepthFirstSearch {
 	final Stack<Node> graph = new Stack<>();
 	private StringBuilder result = new StringBuilder();
 	
-	public void SetResult(int value){
+	public void setResult(int value){
 		result.append(value);
 	}
 	
-	public String GetResult(){
+	public String getResult(){
 		return result.toString();
 	}
 
 	public void execute(Node root){
 		graph.push(root);
 		root.setVisited();
-		SetResult(root.value);
+		setResult(root.value);
 		
 		while(!graph.isEmpty()){
 			Node node = graph.peek();
@@ -25,7 +25,7 @@ public class DepthFirstSearch {
 			
 			if (unvisitedChild != null){
 				unvisitedChild.setVisited();
-				SetResult(unvisitedChild.value);
+				setResult(unvisitedChild.value);
 				graph.push(unvisitedChild);	
 			}
 			else
