@@ -11,9 +11,9 @@ public class TestDepthFirstSearch {
 
 	@Test
 	public void HappyDay() {
-		Node leftLeftNode = new Node(6, null, null);
-		Node leftNode = new Node(4, leftLeftNode, null);
-		Node rightNode = new Node(5, null, null);
+		Node leftLeftNode = new Node(6);
+		Node leftNode = new Node(4, leftLeftNode);
+		Node rightNode = new Node(5);
 		Node root = new Node(1, leftNode, rightNode);
 		
 		DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
