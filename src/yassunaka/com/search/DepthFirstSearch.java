@@ -2,13 +2,22 @@ package yassunaka.com.search;
 
 import java.util.Stack;
 
-public class DepthFirstSearch {
+public class DepthFirstSearch {	
+	final Stack<Node> graph = new Stack<>();
+	private StringBuilder result = new StringBuilder();
 	
+	public void SetResult(int value){
+		result.append(value);
+	}
+	
+	public String GetResult(){
+		return result.toString();
+	}
+
 	public void execute(Node root){
-		Stack<Node> graph = new Stack<>();
 		graph.push(root);
 		root.setVisited();
-		System.out.println(root.value);
+		SetResult(root.value);
 		
 		while(!graph.isEmpty()){
 			Node node = graph.peek();
@@ -16,29 +25,12 @@ public class DepthFirstSearch {
 			
 			if (unvisitedChild != null){
 				unvisitedChild.setVisited();
-				System.out.println(unvisitedChild.value);
+				SetResult(unvisitedChild.value);
 				graph.push(unvisitedChild);	
 			}
 			else
 				graph.pop();
 		}
-		
-	}
-	
-	public static void main(String[] args){
-		Node leftLeftNode = new Node(6, null, null);
-		Node leftNode = new Node(4, leftLeftNode, null);
-		Node rightNode = new Node(5, null, null);
-		Node root = new Node(1, leftNode, rightNode);
-		
-		new DepthFirstSearch().execute(root);
-		/*
-		  1
-		 /\
-		4  5 
-	  /
-	 6 	 
-		 */
 		
 	}
 }
