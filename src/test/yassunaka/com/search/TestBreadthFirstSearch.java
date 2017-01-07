@@ -1,11 +1,8 @@
 package test.yassunaka.com.search;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
 import yassunaka.com.search.BreadthFirstSearch;
-import yassunaka.com.search.DepthFirstSearch;
 import yassunaka.com.search.Node;
 
 public class TestBreadthFirstSearch {
