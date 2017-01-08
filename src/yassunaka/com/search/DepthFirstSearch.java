@@ -3,7 +3,7 @@ package yassunaka.com.search;
 import java.util.Stack;
 
 public class DepthFirstSearch {	
-	final Stack<Node> graph = new Stack<>();
+	final Stack<Node> graph = new Stack<Node>();
 	private StringBuilder result = new StringBuilder();
 	
 	public void setResult(int value){
