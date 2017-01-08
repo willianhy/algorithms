@@ -2,7 +2,7 @@ package hackerrank.com.jumpingontheclouds;
 
 import java.util.Scanner;
 
-//get from https://www.hackerrank.com/challenges/jumping-on-the-clouds
+//problem get from https://www.hackerrank.com/challenges/jumping-on-the-clouds
 public class Solution {
 
     public static void main(String[] args) {
