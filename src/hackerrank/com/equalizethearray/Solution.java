@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+//problem get from https://www.hackerrank.com/challenges/equality-in-a-array
 public class Solution {
 
     public static void main(String[] args) {
