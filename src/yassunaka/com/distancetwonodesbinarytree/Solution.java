@@ -1,4 +1,4 @@
-package yassuna.com.distancetwonodesbinarytree;
+package yassunaka.com.distancetwonodesbinarytree;
 
 public class Solution {
 	public static void main(String[] args){
