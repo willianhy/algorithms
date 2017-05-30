@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+//get from https://www.hackerrank.com/challenges/the-time-in-words
 public class Solution {
 
     public static void main(String[] args) {
