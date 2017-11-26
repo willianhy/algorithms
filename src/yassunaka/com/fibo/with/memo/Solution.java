@@ -4,14 +4,14 @@ import java.util.HashMap;
 
 public class Solution {
 	public static void main(String args[]) {
-		int number = 45;
+		long number = 50;
 		long startTime = System.currentTimeMillis();
-		HashMap<Integer, Integer> memo = new HashMap<Integer, Integer>();
-		System.out.println("fibo with memo " + fibo(number, memo));
+		HashMap<Long, Long> memo = new HashMap<Long, Long>();
+		System.out.println("fibo of " + number + " with memo " + fibo(number, memo));
 		timeInMiliSeconds(startTime);
 		
 		startTime = System.currentTimeMillis();
-		System.out.println("fibo without memo "+ fibo(number));
+		System.out.println("fibo of " + number + " without memo "+ fibo(number));
 		timeInMiliSeconds(startTime);
 	}
 
@@ -19,22 +19,22 @@ public class Solution {
 		System.out.println("Time in miliseconds: "+ (System.currentTimeMillis() - startTime));
 	}
 	
-	private static int fibo(int number, HashMap<Integer, Integer> memo){
+	private static Long fibo(Long number, HashMap<Long, Long> memo){
 		if (number == 0)
-			return 0;
+			return (long) 0;
 		if (number == 1)
-			return 1;
+			return (long) 1;
 		if (!memo.containsKey(number))
 			memo.put(number, fibo(number - 1, memo) + fibo(number - 2, memo));
 			
 		return memo.get(number);
 	}
 	
-	private static int fibo(int number){
+	private static Long fibo(Long number){
 		if (number == 0)
-			return 0;
+			return (long) 0;
 		if (number == 1)
-			return 1;
+			return (long) 1;
 		return fibo(number - 1) + fibo(number - 2);
 	}
 }
