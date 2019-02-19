@@ -12,32 +12,28 @@ public class Solution {
     	for (; i < s.length(); i++) 
 			if (s.charAt(i % s.length()) == 'a')
 				count++;
-		
+    	
     	if (i == n)
     		return count;
     	
-    	long division =  n/s.length();
-    	int rest = (int) (n % s.length());
     	int countRest = 0;
-    	for(int j = 0; j < rest; j++)
+    	for(int j = 0; j < (int) (n % s.length()); j++)
     		if (s.charAt(j) == 'a')
     			countRest++; 
     	
-    	return division*count + countRest;
+    	return (n/s.length())*count + countRest;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-//        String s = scanner.nextLine();
-//
-//        long n = scanner.nextLong();
-//        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-//        long result = repeatedString(s, n);
-//
-//        System.out.println(String.valueOf(result));
-//        scanner.close();
-    	
-    	System.out.println(repeatedString("a", 1000000000000L));
+        String s = scanner.nextLine();
+
+        long n = scanner.nextLong();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        long result = repeatedString(s, n);
+
+        System.out.println(String.valueOf(result));
+        scanner.close();
     }
 }
